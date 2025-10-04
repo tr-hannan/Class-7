@@ -1,0 +1,304 @@
+:root{
+  --text-color: #25282B;
+  --brand-color: #FDC435;
+  --heading-color: #25282B;
+  --paragraph-color: #828282;
+}
+/* css reset start */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ol,
+ul,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #F9FAFF;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  /* margin */
+}
+/* css reset end */
+
+/* common css start */
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.playfairDisplay{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.btn{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+
+.btnBg{
+  background-color: var(--brand-color);
+  border: 2px solid transparent;
+}
+
+.btnOutline{
+  border: 2px solid var(--text-color);
+}
+
+.title{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+  color: var(--heading-color);
+  position: relative;
+}
+
+.title::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--brand-color);
+}
+/* common css end */
+
+nav{
+    padding: 12px 0px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+.navLogo, .navMenu{
+    width: 50%;
+}
+
+.navMenu ul{
+    /* align-items: center; */
+    justify-content: flex-end;
+    gap: 48px;
+}
+
+.navLinks{
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#banner{
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding-top: 110px;
+}
+
+.bannerContent{
+  max-width: 486px;
+}
+
+.bannerContent h4{
+  color: var(--brand-color);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.bannerContent h1{
+  font-size: 64px;
+  /* font-weight: 700; */
+  line-height: 120%;
+  color: var(--heading-color);
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.bannerContent p{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--paragraph-color);
+}
+
+.bannerLinks{
+  margin-top: 32px;
+  gap: 12px;
+}
+
+.projectWrapper{
+  margin-top: 80px;
+  flex-direction: column;
+  gap: 80px;
+}
+ 
+.projectCard{
+  max-width: 992px;
+  margin: auto;
+  /* height: 524px; */
+  border-radius: 24px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: rgba(112, 144, 176, 0.1) 0px 6px 64px 0px;
+}
+
+.projectContentWrapper, .projectImg{
+  width: 50%;
+}
+
+.projectContent{
+  max-width: 407px;
+  margin: auto;
+  padding-left: 50px;
+}
+
+.projectContent h3{
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.projectContent p{
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--paragraph-color);
+  line-height: 150%;
+  margin: 24px 0px;
+}
+
+.btnBorder{
+  border: 1px solid var(--text-color);
+  border-radius: 24px;
+}
+
+.projectCard:nth-child(even) .projectImg{
+  order: -1;
+}
+
+#contact{
+  margin-top: 144px;
+  padding-bottom: 100px;
+}
+
+#contact form{
+  max-width: 400px;
+  margin: auto;
+  margin-top: 80px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#contact form button{
+  max-width: 89px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.formInputs{
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.formInputs input, textarea{
+  font-weight: 400;
+  border-radius: 8px;
+  border: 1px solid rgba(232, 236, 244, 1);
+  line-height: 40px;
+  outline: white;
+  padding: 0px 10px;
+  resize: vertical;
+}
+
+footer{
+  background-image: url("../assets/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 344px;
+}
+
+.footerSocialIcons{
+  justify-content: center;
+  gap: 30px;
+}
+
+footer h6{
+  text-align: center;
+  margin-top: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--paragraph-color);
+}
